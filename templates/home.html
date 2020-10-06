@@ -2,7 +2,11 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>Flask test home page </title>
+    {% if title %}
+        <title>Flask - {{ title }} </title>
+    {% else %}
+        <title>Alternative title </title>
+    {% endif %}
 </head>
 <body>
 {% for post in posts %}
